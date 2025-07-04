@@ -1,0 +1,35 @@
+body {
+  height: 100vh;
+  margin: 0;
+  background-color: #000000;
+  color: white;
+}
+
+* {
+  font-family: "Inter", sans-serif;
+  user-select: none;
+}
+
+.counter {
+  font-variant-numeric: tabular-nums;
+  font-weight: 800;
+  font-size: 16em;
+  user-select: none;
+  text-align: center;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.message {
+  font-size: 4em;
+  text-align: center;
+  opacity: 0;
+  color: gray;
+  user-select: none;
+  position: absolute;
+  left: 50%;
+  top: 70%;
+  transform: translate(-50%, -50%);
+}

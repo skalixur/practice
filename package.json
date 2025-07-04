@@ -1,0 +1,17 @@
+{
+  "name": "practice",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "live-server --port=3000",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "skalixur <juanmateod04@gmail.com> (https://skalixur.github.io/)",
+  "license": "MIT",
+  "packageManager": "pnpm@10.5.1",
+  "devDependencies": {
+    "live-server": "^1.2.2"
+  }
+}
