@@ -2,9 +2,9 @@ const [maxX, maxY] = [window.innerWidth, window.innerHeight];
 const counterElement = document.querySelector(".counter");
 const messageElement = document.querySelector(".message");
 
-let successThreshold = localStorage.getItem("successThreshold") || 7;
+let successThreshold = parseInt(localStorage.getItem("successThreshold")) || 7;
 
-let count = 0;
+let count = parseInt(localStorage.getItem("count")) ?? 0;
 let shouldDisplayMessage = false;
 
 updateCountDisplay();
@@ -38,5 +38,6 @@ function getRandomMessage() {
 }
 
 function updateCountDisplay() {
+  localStorage.setItem("count", count);
   counterElement.textContent = count;
 }
