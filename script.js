@@ -2,9 +2,10 @@ const [maxX, maxY] = [window.innerWidth, window.innerHeight];
 const counterElement = document.querySelector(".counter");
 const messageElement = document.querySelector(".message");
 
-let successThreshold = parseInt(localStorage.getItem("successThreshold")) || 7;
+let successThreshold = parseInt(localStorage.getItem("successThreshold"));
 
 let count = parseInt(localStorage.getItem("count")) ?? 0;
+if (isNaN(count)) count = 0;
 let shouldDisplayMessage = false;
 
 updateCountDisplay();
