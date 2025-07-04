@@ -25,7 +25,6 @@ document.addEventListener("click", (e) => {
 });
 
 function updateMessageDisplay() {
-  console.log(shouldDisplayMessage);
   if (shouldDisplayMessage) {
     messageElement.textContent = getRandomMessage();
     messageElement.style.opacity = 1;
