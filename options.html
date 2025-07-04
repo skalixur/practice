@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Practice — Options</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    * {
+      user-select: auto;
+    }
+
+    body {
+      margin: 2rem;
+    }
+  </style>
+</head>
+
+<body>
+  <label for="success-threshold">Success threshold (number of attempts before resetting to zero)</label>
+  <input id="success-threshold" type="number" placeholder="7">
+  <p>
+    So, what is this?
+    It's a dead simple counter to help me practice piano. I've been playing piano for a couple years, and whenever
+    practicing, I try to play each measure correctly at least seven times in a row before moving onto the next one.
+    Before creating this website, I used a dice to keep track of my progress, but I've since lost it!
+
+    My solution to that is this website. Here's the functionality included:
+  <ul>
+    <li>Tap in the bottom half of the screen to increment the counter by one</li>
+    <li>Tap in the top half to reset it to zero</li>
+    <li>A motivational message, once you get to seven (or a success threshold of your choosing)</li>
+    <li>A customizable success threshold to choose the difficulty of practice</li>
+    <li>Mobile compatibility (because I'm not putting a computer on the piano, please!</li>
+  </ul>
+  </p>
+  <p>
+    <a href="index.html">Go back</a>
+  </p>
+  <script>
+    const successThresholdInput = document.getElementById('success-threshold');
+    const successThreshold = localStorage.getItem('successThreshold') || 7;
+    successThresholdInput.value = successThreshold;
+    successThresholdInput.addEventListener('input', () => {
+      const value = parseInt(successThresholdInput.value, 10);
+      if (isNaN(value) || value <= 0) {
+        alert('Please enter a valid positive number.');
+        return;
+      }
+      localStorage.setItem('successThreshold', value);
+    });
+  </script>
+</body>
+
+</html>

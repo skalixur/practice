@@ -2,7 +2,7 @@ const [maxX, maxY] = [window.innerWidth, window.innerHeight];
 const counterElement = document.querySelector(".counter");
 const messageElement = document.querySelector(".message");
 
-let successThreshhold = 7;
+let successThreshold = localStorage.getItem("successThreshold") || 7;
 
 let count = 0;
 let shouldDisplayMessage = false;
@@ -16,9 +16,9 @@ document.addEventListener("click", (e) => {
   if (isTopHalf) count = 0;
   else count += 1;
 
-  if (count === successThreshhold) shouldDisplayMessage = true;
+  if (count === successThreshold) shouldDisplayMessage = true;
   else shouldDisplayMessage = false;
-  if (count > successThreshhold) count = 0;
+  if (count > successThreshold) count = 0;
 
   updateMessageDisplay();
   updateCountDisplay();

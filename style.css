@@ -1,6 +1,6 @@
 body {
   margin: 0;
-  background-color: #000000;
+  background-color: #121212;
   color: white;
 }
 
@@ -11,7 +11,7 @@ body {
 }
 
 .background-bottom {
-  background-color: #121212;
+  background-color: #212121;
   z-index: -100;
   position: absolute;
   bottom: 0;
@@ -52,5 +52,20 @@ body {
   .message {
     font-size: 2em;
   }
+}
 
+.lucide-circle-question-mark {
+  transition: rotate 0.3s ease, scale 0.3s ease;
+  color: grey;
+  position: absolute;
+  right: 1em;
+  top: 1em;
+  width: 2em;
+  height: 2em;
+}
+
+.lucide-circle-question-mark:hover {
+  cursor: pointer;
+  rotate: 360deg;
+  scale: 1.2;
 }
